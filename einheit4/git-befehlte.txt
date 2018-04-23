@@ -1,0 +1,12 @@
+git init
+git remote add origin ...
+
+git status
+
+git add index.html
+
+git status
+
+git commit -m "neue datei index.html"
+
+git push
