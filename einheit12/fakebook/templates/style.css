@@ -1,0 +1,38 @@
+/*das ist ein kommentar */
+
+/* Tag-Selektor*/
+strong {
+  /* rot-grün-blau-Farbsystem */
+  color: rgb(255, 255, 127);
+  text-decoration: underline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+p {
+  display: inline;
+}
+
+/* Klassen-selektor*/
+.important {
+  color: #ff007f;
+}
+
+/*id-selektor*/
+#add-friend-button {
+  color: red;
+  background-color: grey;
+}
+
+#box {
+  background-color: grey;
+  width: 400px;
+  height: 300px;
+  padding: 30px;
+  border: 4px solid black;
+  margin: 0px auto;
+}
