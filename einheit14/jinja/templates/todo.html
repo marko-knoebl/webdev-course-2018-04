@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+</head>
+<body>
+    <h1>Todo</h1>
+    <ul>
+        {% for todo in todos %}
+            <li>
+                {{todo}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
