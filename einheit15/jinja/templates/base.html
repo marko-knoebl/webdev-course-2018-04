@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block page_title %}{% endblock page_title %}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/random">Random</a></li>
+        <li><a href="/shout">Shout</a></li>
+        <li><a href="/converter">Converter</a></li>
+        <li><a href="/todo">Todo</a></li>
+        <li><a href="/messages">Messages</a></li>
+    </ul>
+
+    {% block page_content %}
+    {% endblock page_content %}
+
+</body>
+</html>
