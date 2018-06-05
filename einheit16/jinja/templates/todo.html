@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo</title>
+</head>
+<body>
+    <h1>Todo</h1>
+    <ul>
+        {% for todo in todos %}
+            <li>
+                {{todo}}
+            </li>
+        {% endfor %}
+    </ul>
+    <form method="post" action="todo-result">
+        <h2>New todo</h2>
+        <input name="new-todo">
+        <button>add</button>
+    </form>
+</body>
+</html>
