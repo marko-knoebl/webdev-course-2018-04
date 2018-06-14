@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block page_title %}Random{% endblock page_title%}
+
+{% block page_content %}
+    <h1>Random</h1>
+    <div class="{% if number < 5 %} low {% else %} high {% endif %}">{{number}}</div>
+    <br>
+    {% if number < 5 %}
+        <p class="low">Number {{number}} is smaller than 5.</p>
+    {% else %}
+        <p class="high">Number {{number}} is bigger than 5.</p>
+    {% endif %}
+{% endblock page_content %}

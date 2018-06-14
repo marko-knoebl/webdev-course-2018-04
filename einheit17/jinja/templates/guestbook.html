@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block page_title %}Guest Book{% endblock page_title%}
+
+{% block page_content %}
+    <h1>Guest Book</h1>
+
+    <!--<ul>
+        {% for message in messages %}
+            <li>{{message.message_text}}: {{message.created}}</li>
+        {% endfor %}
+    </ul>-->
+
+    <ul>
+    {% for entry in entries %}
+        <li>
+            {{entry.text}}:
+            <a href="mailto:{{entry.email}}">{{entry.name}}</a>
+            <a href="/guestbook_entry/{{entry.key.id()}}">details...</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <h2>New Entry</h2>
+
+    <form action="new-guestbook-entry" method="post">
+        Name: <input name="name"> <br>
+        Email: <input name="email"> <br>
+        Text: <input name="entry-text">
+        <button>Add Entry</button>
+    </form>
+{% endblock page_content %}

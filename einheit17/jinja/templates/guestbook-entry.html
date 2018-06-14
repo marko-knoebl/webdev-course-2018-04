@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block page_title %}Guestbook{% endblock page_title%}
+
+{% block page_content %}
+    <h1>Guest Book Entry</h1>
+
+    {{entry.key.id()}}
+
+    <form action="/guestbook-edit/{{entry.key.id()}}" method="post">
+        <input value="{{entry.text}}" name="new-text">
+        <div><a href="mailto:{{entry.email}}">{{entry.name}}</a></div>
+        <div>{{entry.created}}</div>
+        <button>save</button>
+    </form>
+
+    <form action="/guestbook-delete/{{entry.key.id()}}" method="post">
+        <button>delete</button>
+    </form>
+
+{% endblock page_content %}
