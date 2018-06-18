@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div>
+
+    User: {{user.nickname()}}
+    Log out <a href="{{logout_url}}">here</a>
+
+    {% for todo in todos %}
+        <div>
+
+            {% if todo.done == True %}
+                DONE: {{todo.text}}
+            {% else %}
+                TODO: {{todo.text}}
+                <form method="post" action="/done/{{todo.key.id()}}">
+                    <button>done</button>
+                </form>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+
+<form method="post" action="/add">
+    New Task: <input name="new_todo_text">
+    <button>Add</button>
+</form>
+
+{% endblock %}

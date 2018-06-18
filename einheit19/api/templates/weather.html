@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+    <h2>Weather in location {{ weather_info.name }}</h2>
+
+    <p>Description: {{ weather_info.weather[0].description }}</p>
+    <p>Current temperature: {{ weather_info.main.temp - 273.15 }} degrees Celsius</p>
+</body>
+
+</html>
